@@ -8,22 +8,24 @@ import NotFound from '../pages/NotFound';
 import '../styles/global.css';
 
 
+
+
 const App = () =>{
     return (
         <BrowserRouter>
-        <switch>
-            <Layout>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/login"component={Login} />
-                <Route exact path="recovey-password" component={RecoveryPassword} />
-                <Route component={NotFound} />
-            </Layout>
-        </switch>
-
-
+         <Layout>
+        <Switch>
+       
+             <Route exact path="/" component={Home}/>
+             <Route exact path="/login"component={Login} />
+             <Route exact path="/recovey-password" component={RecoveryPassword} />
+             <Route path="*" component={NotFound} />
+         
+        </Switch>
+    </Layout>
         </BrowserRouter>
 
-        );
+         );
         
 }
 
